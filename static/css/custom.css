@@ -1,0 +1,217 @@
+:root {
+  /* definitive color */
+  --color-nei-base: rgb(51, 153, 51);
+  /* #339933 */
+  /* tentative colors*/
+  --color-dark-1: forestgreen;
+  --color-dark-2: #094909;
+
+}
+
+/*  Changing src of the cover image */
+header.masthead {
+  background-image: url('../img/background.png');
+}
+
+/* Down arrow by bootstrap*/
+.u-down-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+/* Fix specifically for dropdown hovers in the navbar*/
+.nav-link .dropdown-toggle::after,
+.nav-link.dropdown-toggle::after {
+  border: 0;
+  margin: 0;
+  display: inline;
+  vertical-align: 0;
+}
+
+/* Fix for dropdowns in navbar*/
+.nav-link .dropdown-toggle,
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* More dropdown fixes*/
+.dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+/* 
+Should only be the color. 
+The division between item should be padding 
+Otherwise mouseover issues
+*/
+.dropdown-divider{
+  margin:0;
+}
+.dropdown-menu > li{
+  display: flex;
+}
+.dropdown-menu > li > a {
+  flex: 1 1 auto;
+  padding: 6px 10px 8px 10px;
+  /* Note: same color as bootstrap's*/
+  border-bottom: 1px solid #e9ecef;
+}
+
+
+/* Another fix for better padding on smaller screens*/
+/* TODO: Fix original template using !important, forcing us to also use it...*/
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1rem 0.5rem !important;
+  }
+}
+
+#mainNav {
+  background: #339933;
+}
+/* Reset back to normal size*/
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 100%;
+  letter-spacing: normal;
+}
+
+/* Changing the hover behaviour*/
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #094909;
+  font-weight: bold;
+}
+
+/* 
+  Okay so a little explanation on this:
+  Because when we bold text it's overall size increases,
+  while we could do size manipulation, we're instead
+  opting for a really simple solution, which is to 
+  "save" space equal to the size.
+  TODO: Maybe change this in the future?
+*/
+#mainNav .navbar-nav .nav-item .nav-link::after {
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+  content: attr(aria-title);
+  font-weight: 800;
+  height: 0;
+}
+
+
+/* resetting the brand padding */
+#mainNav.navbar-shrink .navbar-brand {
+  padding: 0px;
+}
+
+/*  Utilities */
+.u-break-word {
+  word-break: break-word;
+  word-wrap: break-word
+}
+
+/* Apontamentos */
+/* Necessário o !important para fazer override ao bootstrap*/
+a.uc{
+  color:green !important;
+  cursor:pointer;
+}
+
+.apont-button {
+  color: #fff;
+  text-align: center;
+  background-color: #339933;
+  margin-top: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 0;
+  min-height: 150px;
+}
+
+.apont-button:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+  transition: 0.3s;
+
+}
+
+.apont-header {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.hide {
+  display: none;
+}
+
+
+/* Tabs panel */
+.tabbable-panel {
+  padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line>.nav-tabs {
+  border: none;
+  margin: 30px;
+}
+
+.tabbable-line>.nav-tabs>li {
+  margin-right: 100px;
+}
+
+.tabbable-line>.nav-tabs>li>a {
+  text-decoration: none;
+  border: 0;
+  margin-right: 0;
+  color: #737373;
+}
+
+.tabbable-line>.nav-tabs>li>a>i {
+  color: #a6a6a6;
+}
+
+.tabbable-line>.nav-tabs>li.open,
+.tabbable-line>.nav-tabs>li:hover {
+  border-bottom: 4px solid #5d9e5d;
+}
+
+.tabbable-line>.nav-tabs>li.open>a,
+.tabbable-line>.nav-tabs>li:hover>a {
+  border: 0;
+  color: #333333;
+}
+
+.tabbable-line>.nav-tabs>li.open>a>i,
+.tabbable-line>.nav-tabs>li:hover>a>i {
+  color: #a6a6a6;
+}
+
+.tabbable-line>.nav-tabs>li.open .dropdown-menu,
+.tabbable-line>.nav-tabs>li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+
+.tabbable-line>.nav-tabs>li.active {
+  border-bottom: 4px solid green;
+  position: relative;
+}
+
+.tabbable-line>.nav-tabs>li.active>a {
+  border: 0;
+  color: #333333;
+}
+
+.tabbable-line>.nav-tabs>li.active>a>i {
+  color: #404040;
+}
