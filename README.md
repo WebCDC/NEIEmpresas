@@ -1,6 +1,6 @@
-# NEI Webpage
+# NEI CV Dashboard
 
-Núcleo de Estudantes de Informática da Universidade de Aveiro webpage 1.0.
+Núcleo de Estudantes de Informática da Universidade de Aveiro cv dashboard 1.0.
 
 ## Preview
 
